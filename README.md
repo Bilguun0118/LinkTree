@@ -1,5 +1,5 @@
 # MERN Basics
-### [YouTube Link](https://www.youtube.com/watch?v=I7EDAR2GRVo)
+### 
 It comprises of `MongoDB`, `Express`, `React` and `Node`. <br><br>
 Of which `React` is used for **front-end development** <br>
 And `MongoDB`, `Express`, `Node` for **back-end development**
