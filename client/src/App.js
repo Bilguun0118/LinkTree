@@ -46,6 +46,10 @@ function App() {
       </div>
 
       <div>
+        <h1>this is first step</h1>
+      </div>
+
+      <div>
         <input
           type="text"
           placeholder="Name..."
