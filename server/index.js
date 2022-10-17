@@ -8,9 +8,7 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect(
-  "mongodb+srv://Bilguun:Z8MsuqpMvrAbLjS7@cluster0.pt1m8pu.mongodb.net/instagram?retryWrites=true&w=majority"
-);
+mongoose.connect(process.env.MONGODB);
 
 app.get("/getUsers", (req, res) => {
   UserModel.find({}, (err, result) => {
@@ -30,6 +28,6 @@ app.post("/createUser", async (req, res) => {
   res.json(user);
 });
 
-app.listen(3001, () => {
+app.listen(8000, () => {
   console.log("SERVER RUNS PERFECTLY!");
 });
