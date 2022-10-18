@@ -2,6 +2,7 @@ import React from "react";
 import User from "../components/user";
 import Social from "../components/social";
 import Link from "../components/link";
+import Footer from "../components/footer";
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
         <Link />
         <Link />
       </div>
+      <Footer/>
     </div>
   );
 };

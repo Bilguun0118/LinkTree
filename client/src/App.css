@@ -61,6 +61,16 @@
   border: 1px solid orange;
 }
 
+
+/* footer  */
+
+.footer-container {
+  display: flex;
+  flex-direction: column-reverse;
+  
+  height: 20vh;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
