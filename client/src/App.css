@@ -1,5 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+  color: white;
+}
+
+.flex {display: flex;}
+.align-items {align-items: center;}
+.justify-content {justify-content: center;}
+.text-align {text-align: center;}
+.flex-direction-row {flex-direction: row;}
+.flex-direction-column {flex-direction: column;}
+
 .App {
-  text-align: center;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* avatar */
+
+.avatar-container {
+  padding: 40px;
+}
+
+.YourName {
+  margin-top: 20px;
+}
+
+/* social */
+
+.social-container {
+  list-style-type: none;
+}
+
+.icon {
+  padding: 0 20px;
+  cursor: pointer;
+  color: white;
+  size: 100px;
+}
+
+.icon:hover {
+  size: 110px;
+}
+
+
+/* link */
+
+.link-container {
+  padding: 20px;
+}
+
+
+.link {
+  width: 500px;
+  height: 50px;
+  border: 1px solid orange;
 }
 
 .App-logo {
@@ -21,7 +80,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white
 }
 
 .App-link {
