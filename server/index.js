@@ -1,33 +1,26 @@
 const express = require("express");
+const cors = require('cors');
+const dotenv = require("dotenv");
+const { mongodb } = require("./config/db");
+const { userRouter } = require("./routers/user");
+const { linkRouter } = require("./routers/link");
+const { errorHandler } = require("./middleware/errorHandler");
+
+
 const app = express();
-const mongoose = require("mongoose");
-const UserModel = require("./models/Users");
-
-const cors = require("cors");
-
-app.use(express.json());
 app.use(cors());
+dotenv.config({path: './config/config.env'});
+const port = process.env.PORT || 5001;
 
-mongoose.connect(process.env.MONGODB);
 
-app.get("/getUsers", (req, res) => {
-  UserModel.find({}, (err, result) => {
-    if (err) {
-      res.json(err);
-    } else {
-      res.json(result);
-    }
-  });
-});
+mongodb();
+app.use(express.json());
 
-app.post("/createUser", async (req, res) => {
-  const user = req.body;
-  const newUser = new UserModel(user);
-  await newUser.save();
+app.use("/api/v1/",userRouter);
+app.use("/api/v1/",linkRouter);
+app.use(errorHandler);
 
-  res.json(user);
-});
 
-app.listen(8000, () => {
-  console.log("SERVER RUNS PERFECTLY!");
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}.`)
 });

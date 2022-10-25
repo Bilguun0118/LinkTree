@@ -6,7 +6,7 @@ const Links = () => {
   return (
     <>
       <ul className="social-container flex flex-direction-row align-items justify-content">
-        <li onClick={""} className="icon">
+        <li className="icon">
           <CiYoutube size = {30} color="blue"/>
         </li>
         <li className="icon">

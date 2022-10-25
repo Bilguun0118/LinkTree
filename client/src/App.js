@@ -1,17 +1,23 @@
+import React from "react";
 import "./App.css";
-import { useState, useEffect } from "react";
-import Axios from "axios";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { UserContext } from "./context";
 
-import HomePage from "./pages/homePage";
-import Links from "./components/social";
 
-function App() {
+import HomePage from "./pages/HomePage";
+import LogInPage from "./pages/LogInPage";
+import UserPage from "./pages/UserPage"
 
+const App = () => {
   return (
-    <div className="App text-align">
-      <HomePage />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element ={ <HomePage/> }/>
+        <Route path="/login" element ={ <LogInPage/> }/>
+        <Route path="/:userName" element ={ <UserPage/> }/>
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
